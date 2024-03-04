@@ -8,22 +8,12 @@ public class Message implements Serializable{
     String message;
     boolean brodcast = false;
     int port;
-    int cont = 0;
 
     public Message (String sender, String receiver, String message, int port) {
         this.sender = sender;
         this.receiver = receiver;
         this.message = message;
         this.port = port;
-    }
-
-    public void nextPort() {
-        if (port == 54004) {
-            port = 54001;
-        } else {
-            port++;
-        }
-        cont++;
     }
 
     public String getSender() {
@@ -68,14 +58,6 @@ public class Message implements Serializable{
 
     public void setBrodcast(boolean brodcast) {
         this.brodcast = brodcast;
-    }
-
-    public int getCont() {
-        return cont;
-    }
-
-    public void setCont(int cont) {
-        this.cont = cont;
     }
 
 }

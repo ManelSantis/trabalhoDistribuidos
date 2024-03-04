@@ -16,7 +16,7 @@ public class Client implements Runnable{
     public void run() {
         try {
             socket = new Socket(ip, 54000 + port);
-            ImplClient c = new ImplClient(socket, nextPort, port, ip);
+            ImplClient c = new ImplClient(socket, nextPort, port);
             Thread t = new Thread(c);
             t.start();
         } catch (IOException e) {
